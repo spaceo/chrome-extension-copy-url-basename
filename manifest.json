@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "version": "1.0",
-  "name": "Copy url basename!",
+  "name": "Copy url basename",
   "description": "Simple extension that copies the end of the current url",
   "icons": {
     "16": "images/puppy16.png",
