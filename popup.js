@@ -14,9 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const tabUrl = tabs[0].url;
         const url = new URL(tabUrl);
         const basename = url.pathname.split('/').pop().split('?')[0];
+        alert(JSON.stringify(basename));
+        if (!basename) {
+            status.innerHTML = `Could not locate basename`;
+            return;
+        }
 
         copyToClipboard(basename);
 
-        status.innerHTML = `URL basename <em>${basename}</em> has been copied to your clipboard`;
+        status.innerHTML = `Basename: <span class="what-was-copied">"${basename}"</span> has been copied to your clipboard`;
     });
 }, false);
