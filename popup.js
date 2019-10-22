@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tabUrl = tabs[0].url;
         const url = new URL(tabUrl);
         const basename = url.pathname.split('/').pop().split('?')[0];
-        alert(JSON.stringify(basename));
+
         if (!basename) {
             status.innerHTML = `Could not locate basename`;
             return;
